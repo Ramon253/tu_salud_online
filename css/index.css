@@ -2,11 +2,14 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    max-width: 100svw;
+}
+body{
+    overflow-x: hidden;
 }
 
 p {
     font-family: "Nunito", sans-serif;
-
 }
 
 h1, h2, h3 {
@@ -23,6 +26,7 @@ nav {
     flex-flow: row wrap;
     gap: 20px;
     height: 15vh;
+    width: 100svw;
     align-items: center;
     place-content: space-evenly;
     background-color: #273259;
@@ -37,15 +41,18 @@ nav a {
     justify-content: center;
     text-decoration: none;
     color: whitesmoke;
-    padding: 10px;
-    width: 5vw;
-    height: 5vw;
+    border-radius: 1rem;
+    padding: 1rem;
+    transition: background-color 250ms;
 }
 
-
+nav > a > img{
+    width: 5svw;
+    height: 5svh;
+}
 nav a:hover {
     background: #e0e0e0;
-    border-radius: 10px;
+
     color: black;
 }
 
@@ -53,10 +60,10 @@ nav a:hover {
     width: 100%;
 }
 
-header{
-    height: 100vh;
+.header{
+    min-height: 100vh;
 }
-header main {
+header .main {
     display: flex;
     flex-flow: row wrap;
     background-color: #3A4D80;
@@ -64,7 +71,7 @@ header main {
     align-items: center;
     gap: 50px;
     padding: 50px;
-    height: 85vh;
+    min-height: 85vh;
 }
 
 header main .mainText h1, h2 {
@@ -82,7 +89,7 @@ header main .mainText {
     display: flex;
     flex-flow: column wrap;
     gap: 20px;
-    width: 40%;
+    min-width: 40%;
     color: #989898;
 }
 
@@ -213,10 +220,11 @@ main section#specialists main a:hover {
     align-items: center;
     place-content: space-between;
     align-content: center;
-    height: 100vh;
+    min-height: 100vh;
     background: #3a4d80;
     padding-top: 100px;
     padding-bottom: 100px;
+    gap: 5rem;
 }
 
 #cites h1 {
@@ -262,7 +270,7 @@ main section#specialists main a:hover {
 }
 
 #insurance {
-    min-height: 100vh;
+    min-height: 100svh;
     display: flex;
     flex-flow: column;
     place-content: center;
@@ -274,10 +282,11 @@ main section#specialists main a:hover {
 }
 #insurance header{
     display: flex;
+    padding: 3rem;
     place-content: center;
     align-items: center;
     width: 93vw;
-    height: 20vh;
+    max-height: 20dvh;
     background: #273259;
     transform: skew(-30deg);
 }
@@ -295,6 +304,7 @@ main section#specialists main a:hover {
     place-content: center;
     gap: 20px;
     width: 99vw;
+    height: 80vh;
 }
 
 #insurance .plans .plan {
@@ -307,9 +317,8 @@ main section#specialists main a:hover {
     border-radius: 15px;
     place-content: space-between;
     align-items: center;
-    min-height: 650px;
+    min-height: 550px;
     padding: 30px
-
 }
 
 #insurance .plans .plan h2{
@@ -359,8 +368,11 @@ footer{
 footer h1{
     font-size: 15px;
     font-weight: normal;
+    font-family: "Roboto Condensed", sans-serif;
 }
 footer h2{
     font-size: 15px;
     font-weight: normal;
+    font-family: "Roboto Condensed", sans-serif;
+
 }

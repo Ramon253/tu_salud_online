@@ -25,18 +25,26 @@ header {
 }
 
 header .headerWrapper {
-    padding: 50px;
-    width: 15%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25vw;
+    min-width: 150px;
     background: #95aeff;
     height: 100%;
     transform: skew(20deg);
-    margin-left: -30px;
+    margin-left: -3rem;
 }
 header .headerWrapper h1{
     transform: skew(-20deg);
     display: flex;
     place-content: center;
     font-size: 50px;
+    margin-left: 3rem;
+}
+.headerWrapper > h1 > a{
+    text-decoration: none;
 }
 header h2{
     width: 75vw;
@@ -56,7 +64,8 @@ main{
     gap: 60px;
 }
 main section{
-    width: 40%;
+    width: 50vw;
+    min-width: 400px;
     display: flex;
     flex-flow: column;
     gap: 30px;
