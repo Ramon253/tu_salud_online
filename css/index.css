@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -111,106 +112,83 @@ header main .videoPres {
 main section {
     min-height: 100vh;
 }
-main section#specialists h1 {
-    font-size: 75px;
-    font-family: "Roboto Condensed", sans-serif;
-    place-self: center;
-    margin-bottom: 100px;
-    color: whitesmoke;
-    font-weight: lighter;
-}
 
-main section#specialists {
+#specialists {
     background: #273259;
     display: flex;
-    flex-flow: column;
-    padding: 50px;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+    padding: 4rem;
     font-family: "Roboto", sans-serif;
 }
-
-main section#specialists main {
-    display: flex;
-    flex-flow: row wrap;
-    place-content: space-between;
-    color: #e0e0e0;
-
+.carousel-item{
+    gap: 3rem;
 }
-
-main section#specialists main .details {
-    display: flex;
-    flex-flow: column wrap;
-    gap: 40px;
-    width: 50%;
-}
-
-main section#specialists main .details details {
-    background: rgba(74, 100, 167, 0.33);
-}
-
-main section#specialists main .details summary {
-    list-style: none;
-    font-size: 35px;
-    padding: 30px;
-}
-
-/*Icono del details*/
-
-details > summary::before {
-    color: black;
-    font-size: 50px;
-    content: '+ ';
-}
-
-details[open] > summary::before {
-    color: black;
-    font-size: 60px;
-    content: '- ';
-}
-
-details[open] > summary {
-    margin-bottom: 0.5rem;
-}
-
-/*2*/
-
-main section#specialists main .details p {
-    width: 100%;
-    gap: 20px;
-    display: flex;
-    flex-flow: column wrap;
-    background: rgba(74, 100, 167, 0.73);
-    padding: 30px;
-}
-
-main section#specialists main .metOurSpecialists {
-    display: flex;
-    width: 50%;
-    align-content: center;
-    place-content: center;
-    gap: 20px;
-    flex-flow: column wrap;
-}
-
-main section#specialists main a {
-    place-self: center;
-    display: flex;
-    width: 30%;
-    place-content: center;
-    align-items: center;
-    text-decoration: none;
-    background: #0F162B;
+.carouselButton{
+    background: #383a40;
+    color: #e4e4e4;
+    padding: 20px;
     border-radius: 20px;
-    border: none;
-    color: #DEDEDE;
-    font-size: 20px;
-    padding: 10px;
-    font-family: "Nunito", sans-serif;
+    font-family: "Roboto", sans-serif;
+    border: 1px solid black;
+    margin: 2rem;
+    transition: color 300ms;
+}
+.carouselButton:hover{
+    background-color: whitesmoke;
+    border: 1px solid white;
+    & a {
+        color: #383a40;
+    }
+}
+.carouselButton a{
+    text-decoration: none;
+    color: #e4e4e4;
 }
 
-main section#specialists main a:hover {
-    background: whitesmoke;
-    color: #0F162B;
+#specialtiesCarousel{
+    color: #D3D3D3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    width: 40dvw;
+    max-height: 75dvh;
+    min-height: 50dvh;
+    background-color: #5c84cb;
+    border-radius: 1rem;
 }
+#specialtiesCarousel p {
+    color: #d9d9d9;
+}
+#specialists main h2 {
+    width: 40dvw;
+    color: #6495ED;
+    text-align: center;
+}
+#specialists header{
+
+    bottom: 100%;
+    background-color: #070c22;
+    position: relative;
+    color: whitesmoke;
+    padding: 3rem;
+    width: 85dvw;
+    border-radius: 1rem;
+    text-align: center;
+}
+#specialists main{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.carouselIcon{
+    display: flex;
+    justify-content: center;
+}
+
 
 
 #cites {
@@ -271,6 +249,7 @@ main section#specialists main a:hover {
 
 #insurance {
     min-height: 100svh;
+    max-height:none;
     display: flex;
     flex-flow: column;
     place-content: center;
@@ -304,7 +283,7 @@ main section#specialists main a:hover {
     place-content: center;
     gap: 20px;
     width: 99vw;
-    height: 80vh;
+    min-height: 80vh;
 }
 
 #insurance .plans .plan {
