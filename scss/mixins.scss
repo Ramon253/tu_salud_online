@@ -1,0 +1,11 @@
+@mixin reset {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  //Esto es para que un rem = 10 px
+  font-size: 10px;
+}
+@mixin linkReset {
+  text-decoration: none;
+  color: whitesmoke;
+}
